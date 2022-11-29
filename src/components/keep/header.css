@@ -1,0 +1,84 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.header{
+    height: 80px;
+    width: 100%;
+    background-color: darkorange;
+}
+.header h1{
+    color: #fff;
+    text-align: center;
+    line-height: 80px;
+}
+.note{
+    height: 150px;
+    width: 400px;
+    margin: auto;
+    margin-top: 20px;
+    background-color: #fff;
+    box-shadow: 6px 14px 15px 1px lightslategray;
+    align-items: center;
+}
+.note input{
+    display: inline-block;
+    border: none;
+    padding: 3px 7px;
+}
+.note textarea{
+    height: 72px;
+    width: 100%;
+    border: none;
+    padding: 7px;
+}
+.note .notebtn{
+    float: right;
+    margin-top: 20px;
+    background: darkorange;
+    margin-right: 15px;
+    border-radius: 50%;
+    height: 40px;
+    min-width: 40px;
+    color: #fff;
+}
+.note .notebtn:hover{
+    background: green;
+}
+.cnote{
+    width: 300px;
+    min-height: 130px;
+    margin-top: 50px;
+    background-color: #fff;
+    box-shadow: 6px 14px 15px 1px #79660a;
+    align-items: center;
+    margin-left: 15px;
+}
+.cnote h1{
+    font-size: 18px;
+    padding: 7px 10px;
+}
+.cnote p{
+    padding: 0px 10px;
+}
+.cnote .cnotebtn{
+    float: right;
+    margin-top: 20px;
+    background: darkorange;
+    margin-right: 15px;
+    border-radius: 50%;
+    height: 40px;
+    min-width: 40px;
+    color: #fff;
+    z-index: 9999;
+}
+.cnote .cnotebtn:hover{
+    background: red;
+}
+.box{
+    margin-bottom: 150px;
+}
+footer{
+    text-align: center;
+}
