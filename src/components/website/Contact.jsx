@@ -1,6 +1,17 @@
-import React from 'react'
+import React, { useRef } from 'react';
+import emailjs from "@emailjs/browser";
 
 const Contact = () => {
+    const form = useRef();
+    const sendEmail = (e) => {
+        e.preventDefault();
+
+        emailjs.sendForm('service_ctbj5gb', 'template_d5nnb9g', form.current, 'f_rrebR_FfMbUTijz').then((result) => {
+            console.log(result.text);
+        }, (error) => {
+            console.log(error.text);
+        });
+    };
     return (
         <>
             <section className='my-5'>
@@ -10,32 +21,30 @@ const Contact = () => {
                     </div>
                     <div className="row">
                         <div className="col-md-6 col-10 mx-auto">
-                            <form>
-                                <div class="mb-3">
-                                    <label for="exampleInputEmail1" class="form-label">Name</label>
-                                    <input type="text" class="form-control"
+                            <form ref={form} onSubmit={sendEmail} >
+                                <div className="mb-3">
+                                    <label htmlFor="name" className="form-label">Name</label>
+                                    <input name='name' type="text" className="form-control"
                                         placeholder='Enter Your Name' required
                                     />
                                 </div>
-                                <div class="mb-3">
-                                    <label for="exampleInputEmail1" class="form-label">Email</label>
-                                    <input type="email" class="form-control"
+                                <div className="mb-3">
+                                    <label htmlFor="email" className="form-label">Email</label>
+                                    <input name='email' type="email" className="form-control"
                                         placeholder='Enter Your Email' required
                                     />
                                 </div>
-                                <div class="mb-3">
-                                    <label for="exampleInputEmail1" class="form-label">Phone</label>
-                                    <input type="number" class="form-control"
+                                <div className="mb-3">
+                                    <label htmlFor="number" className="form-label">Phone</label>
+                                    <input name='number' type="number" className="form-control"
                                         placeholder='Enter Your Number' required
                                     />
                                 </div>
-                                <div class="mb-3">
-                                    <label for="exampleFormControlTextarea1" class="form-label">Message</label>
-                                    <textarea class="form-control" id="exampleFormControlTextarea1" placeholder='Enter Your Message' rows="3" required></textarea>
+                                <div className="mb-3">
+                                    <label htmlFor="message" className="form-label">Message</label>
+                                    <textarea name='message' className="form-control" id="exampleFormControlTextarea1" placeholder='Enter Your Message' rows="3" required></textarea>
                                 </div>
-                                <div className="mx-auto">
-                                    <button type="submit" class="btn btn-outline-primary">Submit</button>
-                                </div>
+                                <input type="submit" className="btn btn-outline-primary" value="Send" />
                             </form>
                         </div>
                     </div>
