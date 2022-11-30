@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/react-practice%20/static/css/main.55e55314.css",
+    "main.js": "/react-practice%20/static/js/main.0d072c19.js",
+    "static/media/web2.svg": "/react-practice%20/static/media/web2.9f88783cb31ffb7553bbf25a6c6c3f6f.svg",
+    "static/media/img3.jpg": "/react-practice%20/static/media/img3.e21d9818ef9c879949c7.jpg",
+    "static/media/img1.jpeg": "/react-practice%20/static/media/img1.c0323ba7dee2ae7f5cc7.jpeg",
+    "static/media/img2.png": "/react-practice%20/static/media/img2.28cc034699332f09b698.png",
+    "static/media/web.svg": "/react-practice%20/static/media/web.b66c4ee9bd4c4ba44cd1fb2fe8d76ccf.svg",
+    "static/media/img5.png": "/react-practice%20/static/media/img5.618099b24057e596b07e.png",
+    "static/media/img4.jpg": "/react-practice%20/static/media/img4.c6ef8d71245c6f6b1a4e.jpg",
+    "static/media/img6.png": "/react-practice%20/static/media/img6.864be348068531d5741f.png",
+    "index.html": "/react-practice%20/index.html",
+    "main.55e55314.css.map": "/react-practice%20/static/css/main.55e55314.css.map",
+    "main.0d072c19.js.map": "/react-practice%20/static/js/main.0d072c19.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.55e55314.css",
+    "static/js/main.0d072c19.js"
+  ]
+}
