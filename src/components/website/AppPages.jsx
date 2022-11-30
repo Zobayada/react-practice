@@ -6,7 +6,7 @@ import Error from './Error';
 import Home from './Home';
 import Navbar from './Navbar';
 import Service from './Service';
-import './AppPages.css';
+import './AppPages.scss';
 import Footer from './Footer';
 
 const AppPages = () => {
