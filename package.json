@@ -1,5 +1,6 @@
 {
   "name": "awesomeapp",
+  "homepage": "https://Zobayada.github.io/react-practice ",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -12,6 +13,7 @@
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
     "bootstrap": "^5.2.2",
+    "gh-pages": "^4.0.0",
     "material-ui": "^0.20.2",
     "prop-types": "^15.8.1",
     "react": "^18.2.0",
@@ -25,6 +27,8 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -b master -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
