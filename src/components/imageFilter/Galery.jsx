@@ -4,11 +4,21 @@ import Card from './Card';
 import ImgData from "./ImgData";
 import { useState } from 'react';
 
+const btnValue = [...new Set(ImgData.map((curBtn) => curBtn.category)), "all"];
+
 const Galery = () => {
-    const [items, setItems] = useState(ImgData)
+
+    const [btn, setBtn] = useState(btnValue);
+    console.log(setBtn);
+
+    const [items, setItems] = useState(ImgData);
     const filterItem = (categoryItem) => {
+        if (categoryItem === "all") {
+            setItems(ImgData);
+            return;
+        }
         const updateItem = ImgData.filter((curElement) => {
-            return curElement.category == categoryItem
+            return curElement.category === categoryItem;
         })
         setItems(updateItem);
     }
@@ -18,11 +28,11 @@ const Galery = () => {
             <hr />
             <div className="container">
                 <div className="d-flex justify-content-around">
-                    <button className='btn btn-warning' onClick={() => setItems(ImgData)}>All</button>
-                    <button className='btn btn-warning' onClick={() => filterItem("breakfast")}>Breakfast</button>
-                    <button className='btn btn-warning' onClick={() => filterItem("lunch")}>Lunch</button>
-                    <button className='btn btn-warning' onClick={() => filterItem("evening")}>Evening</button>
-                    <button className='btn btn-warning' onClick={() => filterItem("dinner")}>Dinner</button>
+                    {
+                        btn.map((curData, index) => {
+                            return <button key={index} className='btn btn-warning' onClick={() => filterItem(curData)}>{curData}</button>
+                        })
+                    }
                 </div>
             </div>
             <div className="container-fluid">
