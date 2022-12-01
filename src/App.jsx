@@ -1,12 +1,12 @@
 import React from "react";
 import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
 import "../node_modules/bootstrap/dist/js/bootstrap.bundle";
-import WebApp from "./components/website/WebApp";
+import ImgApp from "./components/imageFilter/ImgApp";
 
 const App = () => {
   return (
     <>
-      <WebApp />
+      <ImgApp />
     </>
   )
 }

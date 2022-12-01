@@ -1,0 +1,27 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none !important;
+}
+
+.card {
+    box-shadow: 2px 5px 25px #000;
+}
+
+.img {
+    height: 230px !important;
+    width: 250px;
+}
+
+.card-body {
+    background: #fff;
+    height: 230px;
+}
+
+@media (max-width: 767px) {
+    .img {
+        height: 230px !important;
+        width: 100%;
+    }
+}
