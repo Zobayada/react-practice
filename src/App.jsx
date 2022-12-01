@@ -1,12 +1,12 @@
 import React from "react";
 import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
 import "../node_modules/bootstrap/dist/js/bootstrap.bundle";
-import AppPages from "./components/website/AppPages";
+import WebApp from "./components/website/WebApp";
 
 const App = () => {
   return (
     <>
-      <AppPages />
+      <WebApp />
     </>
   )
 }

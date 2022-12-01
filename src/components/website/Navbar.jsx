@@ -1,7 +1,9 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
+import { useAuth0 } from "@auth0/auth0-react";
 
 const Navbar = () => {
+    const { loginWithRedirect, logout, isAuthenticated, user } = useAuth0();
     return (
         <>
             <div className="container-fluid nav_bg">
@@ -27,6 +29,18 @@ const Navbar = () => {
                                         <li className="nav-item">
                                             <NavLink className="nav-link" to="contact">Contact</NavLink>
                                         </li>
+                                        <li className="nav-item">
+                                            {
+                                                isAuthenticated && <NavLink className="nav-link" style={{ borderBottom: "none" }}>{user.name}</NavLink>
+                                            }
+                                        </li>
+                                        {
+                                            isAuthenticated ? <li className="nav-item"><NavLink className="nav-link btn btn-outline-info" style={{ color: "#fff" }} onClick={() => logout({ returnTo: window.location.origin })}>Log Out</NavLink>
+                                            </li> : <li className="nav-item"><NavLink className="nav-link btn btn-outline-secondary" style={{ color: "#fff" }} onClick={() => loginWithRedirect()}>Log In</NavLink>
+                                            </li>
+                                        }
+
+
                                     </ul>
                                 </div>
                             </div>

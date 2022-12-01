@@ -1,9 +1,9 @@
 {
   "name": "awesomeapp",
-  "homepage": "https://Zobayada.github.io/react-practice ",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@auth0/auth0-react": "^1.12.0",
     "@emailjs/browser": "^3.10.0",
     "@emotion/react": "^11.10.5",
     "@emotion/styled": "^11.10.5",
